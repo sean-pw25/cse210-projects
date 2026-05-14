@@ -1,0 +1,4 @@
+date|prompt|entry
+5/13/2026|What was the best part of my day and what made it so great?|a
+5/13/2026|Who was the most interesting person I interacted with today?|b
+5/13/2026|What emotions did I feel the most today?|c

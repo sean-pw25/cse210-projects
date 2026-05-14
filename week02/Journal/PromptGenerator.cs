@@ -1,9 +1,19 @@
+using System.IO;
+using System.Collections.Generic;
+
 public class PromptGenerator
 {
-    List<string> _prompts = new List<string>();
-
+    public List<string> _prompts = new List<string>();
     public string GetRandomPrompt()
     {
-        return "";
+        string filename = "prompts.txt";
+        string[] lines = File.ReadAllLines(filename);
+        foreach (string line in lines)
+        {
+            _prompts.Add(line);
+        }
+        Random random = new Random();
+        int promptPicker = random.Next(_prompts.Count);
+        return _prompts[promptPicker];
     }
 }
